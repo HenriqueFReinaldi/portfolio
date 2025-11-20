@@ -1,0 +1,109 @@
+html,body{
+    background-color: rgb(250, 250, 250);
+    font-size: 120%;
+    height:100%;
+    margin:0
+}
+body{
+    font-family: 'Hack', monospace;
+    color:rgb(35, 35, 35);
+    display:flex;
+    min-height:100vh; 
+}
+section{
+    padding-bottom: 5px;
+}
+
+a{
+    color: rgb(35, 35, 35);
+    text-decoration: none;
+}
+a:hover{
+    color: dodgerblue;
+}
+
+.main{
+    padding: 10%;
+    padding-top: 5%;
+    width: 80vw
+}
+
+.separador{
+    border-bottom: dashed rgb(230, 230, 230);
+}
+.espaco_vazio{
+    height: 10vh;
+}
+.espaco_vazio2{
+    height: 5vh;
+}
+.espaco_vazio3{
+    height: 20vh;
+}
+.espaco_vazio4{
+    height: 2vh;
+}
+
+.light{
+    color: rgb(100, 100, 100);
+}
+
+.caixa_texto {
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+    text-decoration: none;
+}
+
+.video {
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+.video video {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    display: block;
+    object-position: left;
+}
+
+.nodot{
+    list-style: none;
+}
+
+.projTi{
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.projTi > * {
+    margin: 0;
+    padding: 0;
+    padding-top: 2vh;
+}
+
+.proj{
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 800px) {
+    html, body {
+        font-size: 100%;
+    }
+    .video video {
+        height: 500px;
+        object-fit: cover;
+    }
+    .caixa_texto{
+        width: 30vw;
+    }
+    .projeto{
+        width: 80vw;
+    }
+}
