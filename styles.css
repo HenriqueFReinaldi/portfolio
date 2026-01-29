@@ -1,15 +1,19 @@
+
 html,body{
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
     background-color: rgb(250, 250, 250);
-    font-size: 120%;
-    height:100%;
-    margin:0
-}
-body{
-    font-family: 'Hack', monospace;
-    color:rgb(35, 35, 35);
-    display:flex;
+    font-size: 125%;
+    margin: 0;
+    font-family: ui-monospace, monospace;
     min-height:100vh; 
 }
+
+body{
+    display: flex;
+}
+
+
 section{
     padding-bottom: 5px;
 }
@@ -25,6 +29,7 @@ a:hover{
 .main{
     padding: 10%;
     padding-top: 5%;
+    height: 120vh;
     width: 80vw
 }
 
@@ -32,78 +37,126 @@ a:hover{
     border-bottom: dashed rgb(230, 230, 230);
 }
 .espaco_vazio{
-    height: 10vh;
+    height: 10vmax;
 }
 .espaco_vazio2{
-    height: 5vh;
-}
-.espaco_vazio3{
-    height: 20vh;
-}
-.espaco_vazio4{
-    height: 2vh;
+    height: 5vmax;
 }
 
+
+
+/* estilo texto */
+.empty{
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(86, 86, 86);
+}
+.meiolight{
+    color: rgb(75, 75, 75);
+}
 .light{
-    color: rgb(100, 100, 100);
+    color: rgb(155, 155, 155)
+}
+.nome{
+    font-weight: bold;
+}
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.left{
+    text-align: left;
 }
 
-.caixa_texto {
-    display: flex;
-    justify-content: space-between;
-    width: 20vw;
-    text-decoration: none;
+
+
+.background {
+    background-color: rgb(250, 250, 250);
+    background-image: radial-gradient(#e6e6e6 1px, transparent 1px);
+    background-size: 22px 22px;
 }
+
+
+
+
+
 
 .video {
-    width: 70vw;
-    margin-left: auto;
-    margin-right: auto;
+    border-radius: 7px;
+
     overflow: hidden;
 }
-.video video {
-    width: 100%;
-    height: 700px;
+video {
+    width: 35vmax;
+    height: 20vmax;
     object-fit: cover;
     display: block;
     object-position: left;
 }
 
-.nodot{
-    list-style: none;
-}
 
-.projTi{
-    width: 70vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-.projTi > * {
-    margin: 0;
-    padding: 0;
-    padding-top: 2vh;
-}
 
 .proj{
-    width: 70vw;
+    background-color: rgb(235, 235, 235);
+    border-radius: 15px;
+    width: 38vw;
     margin-left: auto;
     margin-right: auto;
+
+    padding: 1.5vw;
+    box-sizing: border-box;
 }
 
-@media (max-width: 800px) {
-    html, body {
-        font-size: 100%;
+
+.projNome {
+    display: flex;
+    justify-content: space-between;
+    width: 8vmax;
+    text-decoration: none;
+}
+.projDesc {
+    display: flex;
+    justify-content: space-between;
+    width: 35vmax;
+    text-decoration: none;
+}
+
+.projNLCont{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 0; /* no gap between items */
+    width: 100%;
+}
+
+
+.projCont{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 1rem;
+}
+
+.titCont{
+    padding: 1.5vw;
+}
+
+
+@media (max-width: 658px) {
+    html body{
+        font-size: 75%;
     }
-    .video video {
-        height: 500px;
-        object-fit: cover;
+
+    .projCont{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: auto;
+        gap: 1rem;
     }
-    .caixa_texto{
-        width: 30vw;
-    }
-    .projeto{
+
+    .proj{
         width: 80vw;
+        padding: 3vw;
     }
 }
