@@ -26,6 +26,10 @@ a:hover{
     color: dodgerblue;
 }
 
+.redhover:hover{
+    color: rgb(255, 72, 72);
+}
+
 .main{
     padding: 10%;
     padding-top: 5%;
